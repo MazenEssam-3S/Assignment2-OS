@@ -1,0 +1,13 @@
+all: mazen output_program simple_program
+
+mazen: mazen.c
+	gcc mazen.c -o mazen
+
+output_program: mazen1.c mazen2.c
+	gcc mazen1.c mazen2.c -o output_program
+
+simple_program: simple_program.c
+	gcc simple_program.c -o simple_program
+
+clean:
+	rm -f process_creation output_program simple_program
